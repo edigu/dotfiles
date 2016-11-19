@@ -1,0 +1,71 @@
+{
+    // Do we need to blacklist any sub extensions from extensions_to_execute
+    // An example would be ["twig.php"]
+    "extensions_to_blacklist": [],
+
+    // Execute the sniffer on file save
+    "phpcs_execute_on_save": false,
+
+    // Show the error list after save.
+    "phpcs_show_errors_on_save": false,
+
+    // Show the errors in the gutter
+    "phpcs_show_gutter_marks": false,
+
+    // Show outline for errors
+    "phpcs_outline_for_errors": false,
+
+    // Show the errors in the status bar
+    "phpcs_show_errors_in_status": false,
+
+    // Show the errors in the quick panel so you can then goto line
+    "phpcs_show_quick_panel": false,
+
+    // Do you want to run the phpcs checker?
+    "phpcs_sniffer_run": false,
+
+    // Execute the sniffer on file save
+    "phpcs_command_on_save": false,
+
+    // PHP-CS-Fixer settings
+
+    // Fix the issues on save
+    "php_cs_fixer_on_save": true,
+
+    // Show the quick panel
+    "php_cs_fixer_show_quick_panel": true,
+
+    // Path to where you have the php-cs-fixer installed
+    "php_cs_fixer_executable_path": "/usr/local/bin/php-cs-fixer",
+
+    // Additional arguments you can specify into the application
+    "php_cs_fixer_additional_args": {
+        "--fixers" : "braces,elseif,eof_ending,function_call_space,function_declaration,indentation,line_after_namespace,linefeed,lowercase_constants,lowercase_keywords,method_argument_space,multiple_use,parenthesis,php_closing_tag,single_line_after_imports,trailing_spaces,visibility,phpdoc_align,align_double_arrow,align_equals,ternary_spaces,unused_use,ordered_use,return,phpdoc_params,phpdoc_indent,phpdoc_separation,phpdoc_var_without_name,phpdoc_trim"
+    },
+
+    // Are we going to run php -l over the file?
+    "phpcs_linter_run": false,
+
+    // Execute the linter on file save
+    "phpcs_linter_command_on_save": false,
+
+    // It seems python/sublime cannot always find the php application
+    // If empty, then use PATH version of php, else use the set value
+    "phpcs_php_path": "",
+
+    // What is the regex for the linter? Has to provide a named match for 'message' and 'line'
+    "phpcs_linter_regex": "(?P<message>.*) on line (?P<line>\\d+)",
+
+    // PHP Mess Detector settings
+
+    // Execute phpmd
+    "phpmd_run": false,
+
+    // Execute the phpmd on file save
+    "phpmd_command_on_save": false,
+
+    // Execute scheck
+    "scheck_run": false,
+    // Execute the scheck on file save
+    "scheck_command_on_save": false,
+}
