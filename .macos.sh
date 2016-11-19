@@ -724,6 +724,9 @@ defaults write com.twitter.twitter-mac ShowFullNames -bool true
 # Hide the app in the background if it’s not the front-most window
 defaults write com.twitter.twitter-mac HideInBackground -bool true
 
+# Prevent gamecenter deamon
+launchctl unload -w /System/Library/LaunchAgents/com.apple.gamed.plist
+
 ###############################################################################
 # Kill affected applications                                                  #
 ###############################################################################
