@@ -224,3 +224,20 @@ function o() {
 function tre() {
 	tree -aC -I '.git|node_modules|bower_components' --dirsfirst "$@" | less -FRNX;
 }
+
+# Easily restart php and nginx
+function phprestart() {
+    echo "RESTARTING NGINX AND PHP"
+
+    echo "Stopping nginx.."
+    sudo nginx -s stop
+
+    echo "Stopping php..."
+    launchctl unload -w ~/Library/LaunchAgents/homebrew.mxcl.php56.plist
+
+    echo "Starting Nginx..";
+    sudo nginx
+
+    echo "Starting php..."
+    launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.php56.plist
+}
