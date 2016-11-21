@@ -235,9 +235,15 @@ function phprestart() {
     echo "Stopping PHP 7..."
     launchctl unload -w ~/Library/LaunchAgents/homebrew.mxcl.php70.plist
 
+    echo "Stopping PHP 5..."
+    launchctl unload -w ~/Library/LaunchAgents/homebrew.mxcl.php56.plist
+
     echo "Starting Nginx..";
     sudo nginx
 
     echo "Starting PHP 7..."
     launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.php70.plist
+
+    echo "Starting PHP 5..."
+    launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.php56.plist
 }
